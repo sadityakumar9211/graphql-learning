@@ -27,7 +27,7 @@ const RootQuery = new GraphQLObjectType({
             args: { id: { type: GraphQLString } },
             resolve(parent, args){
                 // code to get data from db / other source
-                return _.find(books, { id: args.id });
+                return _.find(books, { id: args.id });  //find the book and return it. GraphQL does the heavy lifting of getting what attributes user has specified in the queries and returning only those.
             }
         }
     }
